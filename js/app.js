@@ -1,5 +1,5 @@
+// Adiciona um evento que será executado quando o DOM estiver completamente carregado.
 document.addEventListener('DOMContentLoaded', function() {
-    // Adiciona um evento que será executado quando o DOM estiver completamente carregado.
     const swiper = new Swiper('.swiper', {
         // Cria uma nova instância do Swiper (carrossel), associada ao contêiner com a classe 'swiper'.
         direction: 'horizontal',
@@ -56,4 +56,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+    
+        // Campo de busca
+        const gameInput = document.getElementById('gameInput');
+    
+        gameInput.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                const searchGame = gameInput.value.trim().toUpperCase();
+    
+                switch (searchGame) {
+                    case 'MARIO':
+                        swiper.slideTo(0);
+                        break;
+                    case 'POKEMON':
+                        swiper.slideTo(1);
+                        break;
+                    case 'ZELDA':
+                        swiper.slideTo(2);
+                        break;
+                    default:
+                        alert('Jogo não encontrado.');
+                }
+    
+                gameInput.value = ''; // Limpa o campo de busca após a busca
+            }
+        });
+    
+        // Modal funcionalidade
+        const openModal = document.getElementById('openModal');
+        const closeModal = document.getElementById('closeModal');
+        const modal = document.getElementById('modal');
+    
+        openModal.addEventListener('click', () => modal.classList.add('active'));
+        closeModal.addEventListener('click', () => modal.classList.remove('active'));
+    
+        document.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    });
+    
+
 });

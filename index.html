@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Define o tipo de documento como HTML5 e define o idioma da página como inglês -->
+
 <head>
     <meta charset="UTF-8">
     <!-- Define o conjunto de caracteres como UTF-8 -->
@@ -36,9 +37,12 @@
                     <!-- Link para o serviço online do Switch, abre em nova aba -->
                 </li>
                 <li>
-                    <a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/" target="_blank">Switch Classic</a>
+                    <a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/"
+                        target="_blank">Switch Classic</a>
                     <!-- Link para os jogos clássicos do Nintendo Switch, abre em nova aba -->
                 </li>
+
+
             </ul>
         </nav>
 
@@ -48,13 +52,19 @@
             <!-- Botão para login -->
             <input type="text" name="" id="">
             <!-- Campo de texto para possível entrada de dados de login -->
-        </div>
 
+        </div>
         <div class="search">
             <!-- Div para a barra de pesquisa -->
             <input type="text" id="gameInput" placeholder="Search">
             <!-- Campo de texto para a pesquisa de jogos -->
         </div>
+
+        <div class="search">
+            <input type="text" id="gameInput" placeholder="Digite o nome do jogo">
+        </div>
+
+
     </header>
 
     <div class="swiper">
@@ -133,88 +143,36 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" id="slide-2">
-                <!-- Segundo slide do carrossel -->
-                <img src="images/pokemon-legends-arceus.jpeg" alt="Banner do Pokemon Legends Arceus">
-                <!-- Imagem do banner do jogo Pokemon Legends Arceus -->
-
-                <div class="backscene"></div>
-                <!-- Div para uma camada de fundo -->
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <img src="images/pokemon-legends-arceus.jpeg" alt="Pokemon Legends Arceus">
                 <div class="banner">
-                    <!-- Banner de conteúdo adicional -->
+                    <h1>Pokemon Legends</h1>
+                    <p>Explore novas aventuras Pokémon!</p>
+                    <button id="openModal">Saiba Mais</button>
+                </div>
+            </div>
 
-                    <div class="left">
-                        <!-- Seção à esquerda do banner -->
-                        <div class="features">
-                            <!-- Div para exibir as características do jogo -->
-                            <div class="rating">
-                                <!-- Exibe a nota de avaliação do jogo -->
-                                <span class="score">8.3</span>
-                                <!-- Nota de avaliação -->
-                                <div class="content">
-                                    <!-- Conteúdo relacionado à avaliação -->
-                                    <span class="subtitle">M E T A S C O R E</span>
-                                    <!-- Subtítulo com a palavra "Metascore" -->
-                                    <h4>Bom</h4>
-                                    <!-- Classificação "Bom" -->
-                                    <span>Prepare-se para uma aventura Pokemon!</span>
-                                    <!-- Descrição do jogo -->
-                                </div>
-                            </div>
-                            <div class="pricing">
-                                <!-- Seção para exibir informações de compra -->
-                                <a href="" target="_blank"></a>
-                                <!-- Link vazio para a compra do jogo -->
-                                <div class="content">
-                                    <!-- Conteúdo relacionado ao preço -->
-                                    <span class="subtitle">Pokemon Legends</span>
-                                    <!-- Título do jogo -->
-                                    <h4>COMPRE AGORA</h4>
-                                    <!-- Chamada para compra -->
-                                    <span>Ação, RPG</span>
-                                    <!-- Categorias do jogo -->
-                                </div>
-                            </div>
-                        </div>
-                        <h1 class="pokemon-title">Pokemon</h1>
-                        <!-- Título "Pokemon" -->
-                    </div>
-                    <img src="images/red.png" alt="Treinador Pokemon Red" class="pokemon">
-                    <!-- Imagem do treinador Pokemon Red -->
-                    <div class="right">
-                        <!-- Seção à direita do banner -->
-                        <ul class="description">
-                            <!-- Lista de descrição do jogo -->
-                            <li>
-                                Data de Lançamento
-                                <p>28 de Janeiro</p>
-                                <!-- Data de lançamento do jogo -->
-                            </li>
-                            <li>
-                                <h4>Modos de jogo</h4>
-                                <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
-                                <!-- Modos de jogo disponíveis -->
-                            </li>
-                        </ul>
-                        <div class="trailer">
-                            <!-- Seção para exibir o trailer -->
-                            <h2>Assista ao Trailer</h2>
-                            <!-- Título "Assista ao Trailer" -->
-                            <iframe src="" frameborder="0"></iframe>
-                            <!-- Frame do YouTube vazio para o trailer do jogo -->
-                        </div>
-                    </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <img src="images/zelda_banner.jpeg" alt="Zelda">
+                <div class="banner">
+                    <h1>Zelda</h1>
+                    <p>Entre no mundo de Zelda!</p>
+                    <a href="https://www.nintendo.com" target="_blank" class="btn">Saiba Mais</a>
                 </div>
             </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <!-- Botão de navegação para o slide anterior -->
-        <div class="swiper-button-next"></div>
-        <!-- Botão de navegação para o próximo slide -->
+    </div>
+    <div class="swiper-button-prev"></div>
+    <!-- Botão de navegação para o slide anterior -->
+    <div class="swiper-button-next"></div>
+    <!-- Botão de navegação para o próximo slide -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Script da biblioteca Swiper para o funcionamento do carrossel -->
     <script src="js/app.js"></script>
     <!-- Script externo para a lógica JavaScript personalizada -->
 </body>
+
 </html>
